@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  
+  <h1>Contacts</h1>
+  <section class="company_info">
+      <ul>
+        {% for contactus in Contact_info %}
+          <li>
+            <h2>{{ contactus.dept }}</h2><br>
+            Phone Number: ${{ contactus.phone }}<br>
+            Email: {{ contactus.email }}
+          </li>
+          <hr>
+        {% endfor %}
+      </ul>
+  </section>
+  
+
+{% endblock %}

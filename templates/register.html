@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+{% if message %}
+  <div class="alert alert-success">
+    {{ message }}
+  </div>
+{% endif %}
+
+<form method="POST" class="bg-success-subtle border border-success p-4 rounded">
+
+  <div class="mb-3">
+    <label for="email" class="form-label text-success">Email address</label>
+    <input type="email" name="email" class="form-control border-success" id="email">
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label text-success">Password</label>
+    <input type="password" name="password" class="form-control border-success" id="password">
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input border-success" id="check1">
+    <label class="form-check-label text-success" for="check1">Check me out</label>
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+{% endblock %}

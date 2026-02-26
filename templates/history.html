@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}The History{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  
+  <h1>The History</h1>
+  <section class="history">
+      <ul>
+        {% for history in History %}
+          <li>
+            <h2> Year: {{ history.year }}</h2><br>
+            <h5> Event: {{ history.event }}</h5><br>
+          </li>
+          <hr>
+        {% endfor %}
+      </ul>
+  </section>
+  
+{% endblock %}

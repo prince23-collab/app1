@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}The Company{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  
+  <h1>The Company</h1>
+  <section style="text-align: center;" class="company_info">
+      <ul>
+        {% for company in company_info %}
+          <li>
+            <h2>{{ company.name }}</h2><br>
+            Address: {{ company.address }}<br>
+            Phone Number: ${{ company.phone }}<br>
+            Email: {{ company.email }}
+          </li>
+          <hr>
+        {% endfor %}
+      </ul>
+  </section>
+  
+  <h3 style="text-align: center;"> Our company focuses on delivering quality products and services. 
+    We aim to provide excellent customer satisfaction and innovation.</h3>
+</div>
+{% endblock %}
